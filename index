@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Circle into Calm, a guided social-centric meditation experience in Bengaluru. Gather, breathe, release, and journey into stillness with a decade-long practitioner. From $25/person.">
+<meta name="keywords" content="meditation Bengaluru, guided meditation, breathwork, mindfulness, AirBnB experience, wellness Bangalore, group meditation">
+<meta property="og:title" content="Circle into Calm, Guided Meditation Experience, Bengaluru">
+<meta property="og:description" content="Gather in a human connection circle, steady your breath, release emotional weight and listen beyond sound as a decade-long meditator leads you into stillness.">
+<meta property="og:type" content="website">
+<title>Circle into Calm — Guided Meditation Experience · Bengaluru</title>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ── RESET ── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* Airbnb-inspired warm palette */
+  --bg:         #FBF9F6;
+  --bg-card:    #FFFFFF;
+  --bg-warm:    #F7F2EC;
+  --bg-sage:    #F0F4F1;
+  --border:     #E8E2D9;
+  --border-soft:#EDE8E2;
+
+  --text-primary:   #222222;
+  --text-secondary: #6B6060;
+  --text-muted:     #9A9090;
+
+  --coral:       #E07060;
+  --coral-soft:  #F5EAE7;
+  --coral-mid:   #D4624E;
+
+  --sage:        #6E8F7E;
+  --sage-soft:   #ECF2EE;
+  --sage-mid:    #4F7A6A;
+
+  --gold:        #B8966A;
+  --gold-soft:   #F5EEE3;
+  --gold-mid:    #9E7D4E;
+
+  --shadow-sm: 0 1px 4px rgba(0,0,0,0.06), 0 2px 8px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.08), 0 2px 6px rgba(0,0,0,0.05);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.1), 0 4px 12px rgba(0,0,0,0.06);
+
+  --radius-sm:  8px;
+  --radius:     14px;
+  --radius-lg:  20px;
+  --trans: 0.3s ease;
+
+  --font-head: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', 'Segoe UI', system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.7;
+  font-weight: 300;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--border-soft); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2.5rem;
+  background: rgba(251,249,246,0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-soft);
+  transition: var(--trans);
+}
+.nav-logo {
+  font-family: var(--font-head);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+.nav-logo span { color: var(--coral); }
+.nav-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.4rem;
+  background: var(--coral);
+  color: #fff;
+  border-radius: 50px;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.85rem;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: var(--trans);
+  box-shadow: 0 2px 8px rgba(224,112,96,0.25);
+}
+.nav-cta:hover { background: var(--coral-mid); transform: translateY(-1px); box-shadow: 0 4px 14px rgba(224,112,96,0.35); }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8rem 1.5rem 5rem;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 30%, rgba(176,141,102,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 15% 85%, rgba(110,143,126,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 35% at 85% 15%, rgba(224,112,96,0.06) 0%, transparent 60%),
+    var(--bg);
+  position: relative;
+}
+.hero-content { max-width: 700px; position: relative; z-index: 1; }
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 1.1rem;
+  background: var(--coral-soft);
+  border: 1px solid rgba(224,112,96,0.2);
+  border-radius: 50px;
+  font-size: 0.72rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--coral);
+  font-weight: 500;
+  margin-bottom: 1.75rem;
+}
+.eyebrow-dot {
+  width: 5px; height: 5px;
+  background: var(--coral);
+  border-radius: 50%;
+  animation: blink 2.5s ease-in-out infinite;
+}
+@keyframes blink { 0%,100%{ opacity:1; } 50%{ opacity:0.3; } }
+
+.hero h1 {
+  font-family: var(--font-head);
+  font-size: clamp(2.8rem, 7vw, 5rem);
+  font-weight: 300;
+  color: var(--text-primary);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.25rem;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--sage-mid);
+}
+
+.hero-tagline {
+  font-size: clamp(1rem, 2vw, 1.15rem);
+  color: var(--text-secondary);
+  max-width: 540px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.85;
+  font-style: italic;
+  font-family: var(--font-head);
+  font-weight: 300;
+}
+
+.hero-pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+  margin-bottom: 2.5rem;
+}
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+  box-shadow: var(--shadow-sm);
+}
+.pill-icon { font-size: 0.9rem; }
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  justify-content: center;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 2.2rem;
+  background: var(--coral);
+  color: #fff;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: var(--trans);
+  box-shadow: 0 4px 16px rgba(224,112,96,0.3);
+  font-family: var(--font-body);
+}
+.btn-primary:hover { background: var(--coral-mid); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(224,112,96,0.4); }
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 2.2rem;
+  border: 1.5px solid var(--border);
+  color: var(--text-secondary);
+  border-radius: 12px;
+  font-weight: 400;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: var(--trans);
+  background: var(--bg-card);
+  font-family: var(--font-body);
+}
+.btn-ghost:hover { border-color: var(--sage); color: var(--sage-mid); transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+
+.scroll-cue {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.scroll-cue-line {
+  width: 1.5px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+  animation: grow 2s ease-in-out infinite;
+}
+@keyframes grow { 0%,100%{height:0;opacity:0} 50%{height:40px;opacity:1} }
+
+/* ── STAT STRIP ── */
+.stat-strip {
+  background: var(--bg-card);
+  border-top: 1px solid var(--border-soft);
+  border-bottom: 1px solid var(--border-soft);
+  padding: 2.25rem 1.5rem;
+}
+.stat-strip-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  text-align: center;
+}
+.stat-item .val {
+  font-family: var(--font-head);
+  font-size: 2rem;
+  color: var(--coral);
+  line-height: 1.1;
+  font-weight: 400;
+  display: block;
+}
+.stat-item .lbl {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  margin-top: 0.2rem;
+  display: block;
+}
+.stat-item .sub {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  opacity: 0.7;
+  display: block;
+}
+
+/* ── SECTIONS ── */
+section { padding: 5.5rem 1.5rem; }
+.container { max-width: 1060px; margin: 0 auto; }
+.section-eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--sage);
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+  display: block;
+}
+.section-title {
+  font-family: var(--font-head);
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  font-weight: 300;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: 0.85rem;
+}
+.section-sub {
+  font-size: 0.98rem;
+  color: var(--text-secondary);
+  max-width: 520px;
+  line-height: 1.85;
+}
+.divider { border: none; border-top: 1px solid var(--border-soft); }
+
+/* ── JOURNEY ── */
+.journey { background: var(--bg); }
+.journey-header { margin-bottom: 3rem; }
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+.jcard {
+  padding: 1.6rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: var(--trans);
+  position: relative;
+  overflow: hidden;
+}
+.jcard::after {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--coral), var(--sage));
+  opacity: 0;
+  transition: var(--trans);
+}
+.jcard:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); border-color: var(--border); }
+.jcard:hover::after { opacity: 1; }
+
+.jcard-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.85rem;
+}
+.jcard-num {
+  font-family: var(--font-head);
+  font-size: 2.2rem;
+  color: var(--border);
+  line-height: 1;
+  font-weight: 300;
+}
+.jcard-dur {
+  font-size: 0.7rem;
+  color: var(--sage);
+  background: var(--sage-soft);
+  padding: 0.2rem 0.7rem;
+  border-radius: 50px;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.jcard-title {
+  font-family: var(--font-head);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+  line-height: 1.3;
+}
+.jcard-desc {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+/* ── PROGRAM ── */
+.program { background: var(--bg-warm); }
+.program-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+@media(max-width:680px){ .program-cols{ grid-template-columns:1fr; gap:2rem; } }
+
+.phase-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--coral);
+  font-weight: 500;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1.1rem;
+  display: block;
+}
+.prog-row {
+  display: flex;
+  gap: 0.85rem;
+  margin-bottom: 0.75rem;
+  align-items: flex-start;
+}
+.prog-time {
+  font-size: 0.7rem;
+  color: var(--sage);
+  white-space: nowrap;
+  font-family: monospace;
+  padding-top: 0.2rem;
+  min-width: 36px;
+}
+.prog-name {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+.prog-break {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin: 1rem 0;
+}
+.prog-break::before, .prog-break::after { content:''; flex:1; border-top:1px dashed var(--border); }
+
+.program-note {
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--sage-soft);
+  border-left: 3px solid var(--sage);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+.program-note strong { color: var(--sage-mid); font-weight: 500; }
+
+/* ── HOST ── */
+.host { background: var(--bg); }
+.host-grid {
+  display: grid;
+  grid-template-columns: 380px 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+@media(max-width:860px){ .host-grid{ grid-template-columns:1fr; gap:2.5rem; } }
+
+.host-photos {
+  position: sticky;
+  top: 5.5rem;
+}
+.photos-mosaic {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 280px 160px;
+  gap: 10px;
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.photo-main {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+.photo-left { grid-column: 1; grid-row: 2; }
+.photo-right { grid-column: 2; grid-row: 2; }
+
+/* ── PHOTO PLACEHOLDERS ── */
+/* To add your actual photos, replace the background-image on these three elements:
+   .photo-portrait    → your smiling portrait (the Himalayan photo)
+   .photo-meditation  → your meditation on rock photo
+   .photo-accent      → any other image or leave as gradient
+*/
+.photo-main .photo-inner,
+.photo-left .photo-inner,
+.photo-right .photo-inner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+  display: block;
+}
+
+.photo-slot {
+  width: 100%; height: 100%;
+  overflow: hidden;
+}
+.photo-slot img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+.photo-slot:hover img { transform: scale(1.03); }
+
+/* Photo slots */
+
+.host-stat-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+  margin-top: 0.65rem;
+}
+.host-mini-stat {
+  padding: 0.75rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+.host-mini-stat .v {
+  font-family: var(--font-head);
+  font-size: 1.3rem;
+  color: var(--coral);
+  display: block;
+  line-height: 1.2;
+  font-weight: 400;
+}
+.host-mini-stat .l {
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.host-bio-col h2 {
+  font-family: var(--font-head);
+  font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+  font-weight: 300;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: 0.35rem;
+}
+.host-role {
+  font-size: 0.82rem;
+  color: var(--coral);
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+.host-bio-col p {
+  font-size: 0.925rem;
+  color: var(--text-secondary);
+  line-height: 1.9;
+  margin-bottom: 1rem;
+}
+
+.traditions-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--sage);
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  margin-top: 1.5rem;
+  display: block;
+}
+.traditions-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.trad-tag {
+  padding: 0.35rem 0.85rem;
+  background: var(--bg-warm);
+  border: 1px solid var(--border);
+  border-radius: 50px;
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+/* ── TESTIMONIALS ── */
+.testimonials { background: var(--bg-warm); }
+.testi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 3rem;
+}
+.tcard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-sm);
+}
+.tcard-stars { color: #F5A623; font-size: 0.85rem; letter-spacing: 2px; display: block; margin-bottom: 0.85rem; }
+.tcard-text {
+  font-family: var(--font-head);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--text-primary);
+  line-height: 1.85;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+.tcard-author { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.07em; }
+
+/* ── INCLUDED ── */
+.included { background: var(--bg); }
+.included-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.1rem;
+  margin-top: 3rem;
+}
+.inc-card {
+  padding: 1.75rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+.inc-card h3 {
+  font-size: 0.7rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 1.1rem;
+}
+.inc-list { list-style: none; }
+.inc-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.6rem;
+  line-height: 1.55;
+}
+.inc-list li::before {
+  content: '◇';
+  color: var(--sage);
+  font-size: 0.65rem;
+  flex-shrink: 0;
+  margin-top: 0.3rem;
+}
+.bring-list li::before { color: var(--coral) !important; }
+
+/* ── PRACTICAL ── */
+.practical { background: var(--bg-warm); }
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 3rem;
+}
+.info-card {
+  padding: 1.6rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+.info-icon { font-size: 1.4rem; display: block; margin-bottom: 0.65rem; }
+.info-card h4 {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.info-card p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+/* ── KNOW BEFORE ── */
+.know-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.85rem;
+  margin-top: 2.5rem;
+}
+.know-row {
+  display: flex;
+  gap: 0.9rem;
+  padding: 1.1rem 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-sm);
+  align-items: flex-start;
+  box-shadow: var(--shadow-sm);
+}
+.know-ico {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  background: var(--gold-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  flex-shrink: 0;
+}
+.know-row h5 {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+.know-row p {
+  font-size: 0.81rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* ── LOCATION ── */
+.location-box {
+  margin-top: 3.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2.5rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+@media(max-width:620px){ .location-box{ grid-template-columns:1fr; } }
+.location-box h4 {
+  font-family: var(--font-head);
+  font-size: 1.35rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-bottom: 0.65rem;
+}
+.location-box p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+.landmarks { margin-top: 1rem; display: flex; flex-direction: column; gap: 0.45rem; }
+.lm {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.83rem;
+  color: var(--text-secondary);
+}
+.lm::before { content: '→'; color: var(--sage); font-size: 0.75rem; }
+.map-box {
+  background: linear-gradient(135deg, var(--sage-soft) 0%, var(--bg-warm) 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-align: center;
+  gap: 0.4rem;
+  padding: 1rem;
+}
+.map-icon { font-size: 2rem; margin-bottom: 0.3rem; display: block; opacity: 0.5; }
+
+/* ── BOOKING CTA ── */
+.booking {
+  background: var(--bg-card);
+  border-top: 1px solid var(--border-soft);
+  text-align: center;
+  padding: 5.5rem 1.5rem;
+}
+.price-block { margin: 2rem auto; }
+.price-from { font-size: 0.8rem; color: var(--text-muted); letter-spacing: 0.1em; text-transform: uppercase; display: block; }
+.price-val {
+  font-family: var(--font-head);
+  font-size: clamp(3rem, 8vw, 5rem);
+  color: var(--coral);
+  line-height: 1;
+  font-weight: 300;
+  display: block;
+  margin: 0.2rem 0;
+}
+.price-note { font-size: 0.82rem; color: var(--text-muted); display: block; margin-top: 0.2rem; }
+
+.airbnb-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.05rem 2.75rem;
+  background: #FF5A5F;
+  color: #fff;
+  border-radius: 12px;
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  font-family: var(--font-body);
+  transition: var(--trans);
+  box-shadow: 0 4px 18px rgba(255,90,95,0.28);
+  margin-top: 1.5rem;
+  letter-spacing: 0.01em;
+}
+.airbnb-btn:hover { background: #e04e52; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(255,90,95,0.38); }
+
+.reassurance {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: center;
+  margin-top: 2.25rem;
+}
+.r-item {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+.r-check { color: var(--sage); font-size: 0.85rem; }
+
+/* ── FOOTER ── */
+footer {
+  padding: 2.5rem 1.5rem;
+  border-top: 1px solid var(--border-soft);
+  background: var(--bg);
+  text-align: center;
+}
+footer p {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  line-height: 1.9;
+}
+footer a { color: var(--coral); text-decoration: none; }
+footer a:hover { text-decoration: underline; }
+
+/* ── ANIMATIONS ── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+
+/* ── RESPONSIVE ── */
+@media(max-width:768px){
+  nav { padding: 0.85rem 1.25rem; }
+  section { padding: 4rem 1.25rem; }
+  .journey-grid { grid-template-columns: 1fr; }
+}
+@media(max-width:480px){
+  .hero-pills { flex-direction: column; align-items: center; }
+  .hero-actions { flex-direction: column; }
+  .btn-primary, .btn-ghost { justify-content: center; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">◎ Circle into <span>Calm</span></a>
+  <a href="#book" class="nav-cta">Book Experience · $25</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content fade-up">
+    <div class="hero-eyebrow">
+      <span class="eyebrow-dot"></span>
+      Meditation &amp; Wellness · AirBnB Experience · Bengaluru
+    </div>
+    <h1>Circle into <em>Calm</em></h1>
+    <p class="hero-tagline">
+      Gather in a human connection circle, steady your breath, release emotional weight and listen beyond sound as a decade-long meditator leads you into stillness and integration.
+    </p>
+    <div class="hero-pills">
+      <span class="pill"><span class="pill-icon">◷</span> 2.5 Hours Total</span>
+      <span class="pill"><span class="pill-icon">◉</span> Up to 5 Guests</span>
+      <span class="pill"><span class="pill-icon">◈</span> English &amp; Universal Sound</span>
+      <span class="pill"><span class="pill-icon">◫</span> Drinks &amp; Equipment Included</span>
+    </div>
+    <div class="hero-actions">
+      <a href="#book" class="btn-primary">Book for $25/person</a>
+      <a href="#journey" class="btn-ghost">Explore the Journey ↓</a>
+    </div>
+  </div>
+  <div class="scroll-cue">
+    <div class="scroll-cue-line"></div>
+  </div>
+</section>
+
+<!-- STAT STRIP -->
+<div class="stat-strip">
+  <div class="stat-strip-inner">
+    <div class="stat-item fade-up">
+      <span class="val">$25</span>
+      <span class="lbl">From per person</span>
+    </div>
+    <div class="stat-item fade-up">
+      <span class="val">2.5</span>
+      <span class="lbl">Hours total</span>
+    </div>
+    <div class="stat-item fade-up">
+      <span class="val">5</span>
+      <span class="lbl">Max group</span>
+    </div>
+    <div class="stat-item fade-up">
+      <span class="val">10+</span>
+      <span class="lbl">Years practice</span>
+    </div>
+    <div class="stat-item fade-up">
+      <span class="val">9</span>
+      <span class="lbl">Curated modules</span>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- SESSION JOURNEY -->
+<section class="journey" id="journey">
+  <div class="container">
+    <div class="journey-header fade-up">
+      <span class="section-eyebrow">The Arc of Experience</span>
+      <h2 class="section-title">Your 2.5-Hour Journey</h2>
+      <p class="section-sub">Each module flows seamlessly into the next, from arrival to deep integration, guided by techniques curated directly from the original founders and creators of each practice.</p>
+    </div>
+    <div class="journey-grid">
+      <div class="jcard fade-up">
+        <div class="jcard-top"><span class="jcard-num">01</span><span class="jcard-dur">15 mins</span></div>
+        <h3 class="jcard-title">Mindful Arrival Ritual</h3>
+        <p class="jcard-desc">Arrive, unwind with herbal tea, soothing aromas, ambient music, and settle into the space. Let the city fall away at the door.</p>
+      </div>
+      <div class="jcard fade-up">
+        <div class="jcard-top"><span class="jcard-num">02</span><span class="jcard-dur">15 mins</span></div>
+        <h3 class="jcard-title">The Human Connection Circle</h3>
+        <p class="jcard-desc">Meet fellow practitioners, share intentions and expectations, and create a sense of community, harnessing the 3x power of group meditation dynamics.</p>
+      </div>
+      <div class="jcard fade-up">
+        <div class="jcard-top"><span class="jcard-num">03</span><span class="jcard-dur">15 mins</span></div>
+        <h3 class="jcard-title">Breath as an Anchor</h3>
+        <p class="jcard-desc">Practice simple but powerful breathwork techniques to calm the mind, center awareness, and prepare the nervous system for deep meditation.</p>
+      </div>
+      <div class="jcard fade-up">
+        <div class="jcard-top"><span class="jcard-num">04</span><span class="jcard-dur">15 mins</span></div>
+        <h3 class="jcard-title">Releasing Emotional Weight</h3>
+        <p class="jcard-desc">Experience guided practices to release emotional tension, stress, and mental clutter accumulated from the pace of Bengaluru's IT corridors.</p>
+      </div>
+      <div class="jcard fade-up">
+        <div class="jcard-top"><span class="jcard-num">05</span><span class="jcard-dur">15 mins</span></div>
+        <h3 class="jcard-title">Opening the Heart</h3>
+        <p class="jcard-desc">Cultivate self-compassion, gratitude, and emotional well-being through guided reflection. From thought-fullness toward thought-lessness.</p>
+      </div>
+      <div class="jcard fade-up">
+        <div class="jcard-top"><span class="jcard-num">06</span><span class="jcard-dur">30 mins</span></div>
+        <h3 class="jcard-title">Journey Into Stillness</h3>
+        <p class="jcard-desc">Follow a deeply immersive guided meditation combining visualization, awareness, and presence, the experiential core of the session.</p>
+      </div>
+      <div class="jcard fade-up">
+        <div class="jcard-top"><span class="jcard-num">07</span><span class="jcard-dur">15 mins</span></div>
+        <h3 class="jcard-title">Listening Beyond Sound</h3>
+        <p class="jcard-desc">Explore mindful listening through sound attunement, silence, and sensory awareness. Hear what stillness has to say.</p>
+      </div>
+      <div class="jcard fade-up">
+        <div class="jcard-top"><span class="jcard-num">08</span><span class="jcard-dur">15 mins</span></div>
+        <h3 class="jcard-title">Conscious Deep Rest</h3>
+        <p class="jcard-desc">Experience profound relaxation through body scanning and restorative meditation techniques drawn from Yoga Nidra traditions.</p>
+      </div>
+      <div class="jcard fade-up">
+        <div class="jcard-top"><span class="jcard-num">09</span><span class="jcard-dur">15 mins</span></div>
+        <h3 class="jcard-title">Insights &amp; Integration</h3>
+        <p class="jcard-desc">Reflect on your experience through journaling and discover practical ways to sustain your own daily practice, plus resources to carry the journey forward.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- FULL PROGRAM -->
+<section class="program" id="program">
+  <div class="container">
+    <div class="fade-up">
+      <span class="section-eyebrow">Session Breakdown</span>
+      <h2 class="section-title">The Full Program</h2>
+      <p class="section-sub">A 90-minute curated practice plus mindful arrival, tea, and conscious integration, totalling 2.5 hours of intentional time.</p>
+    </div>
+    <div class="program-cols">
+      <div class="fade-up">
+        <span class="phase-label">I &nbsp; Introduction (15 Mins)</span>
+        <div class="prog-row"><span class="prog-time">5m</span><span class="prog-name">Reception and getting to know each other in circle</span></div>
+        <div class="prog-row"><span class="prog-time">5m</span><span class="prog-name">Sharing experiences with meditation and group expectations</span></div>
+        <div class="prog-row"><span class="prog-time">5m</span><span class="prog-name">Theory of meditation plus overview of available techniques</span></div>
+
+        <span class="phase-label" style="margin-top:1.75rem;">II &nbsp; Guided Practice (75 Mins)</span>
+        <div class="prog-row"><span class="prog-time">5m</span><span class="prog-name">Intention (Sankalpa) Setting</span></div>
+        <div class="prog-row"><span class="prog-time">5m</span><span class="prog-name">Emotional Upsurge Meditation</span></div>
+        <div class="prog-row"><span class="prog-time">7m</span><span class="prog-name">Self-Love Meditation</span></div>
+        <div class="prog-row"><span class="prog-time">5m</span><span class="prog-name">Alignment Practice</span></div>
+        <div class="prog-row"><span class="prog-time">2m</span><span class="prog-name">Instant Relaxation</span></div>
+        <div class="prog-row"><span class="prog-time">5m</span><span class="prog-name">Breathing Technique for Centering</span></div>
+        <div class="prog-break">Tea Break &amp; Bio</div>
+        <div class="prog-row"><span class="prog-time">10m</span><span class="prog-name">Guided Meditation Part 1</span></div>
+        <div class="prog-row"><span class="prog-time">3m</span><span class="prog-name">Sound Attunement</span></div>
+        <div class="prog-row"><span class="prog-time">20m</span><span class="prog-name">Guided Meditation Part 2</span></div>
+        <div class="prog-row"><span class="prog-time">5m</span><span class="prog-name">Deep Relaxation</span></div>
+        <div class="prog-row"><span class="prog-time">3m</span><span class="prog-name">Anchoring Me-Time</span></div>
+      </div>
+
+      <div class="fade-up">
+        <span class="phase-label">III &nbsp; Knowledge &amp; Next Steps (20 Mins)</span>
+        <div class="prog-row"><span class="prog-time"></span><span class="prog-name">Q&amp;A, clarify any doubts</span></div>
+        <div class="prog-row"><span class="prog-time"></span><span class="prog-name">Printable daily practice checklist</span></div>
+        <div class="prog-row"><span class="prog-time"></span><span class="prog-name">Downloadable MP3s for daily rituals via email or WhatsApp</span></div>
+        <div class="prog-row"><span class="prog-time"></span><span class="prog-name">Curated book and podcast recommendations</span></div>
+        <div class="prog-row"><span class="prog-time"></span><span class="prog-name">Links to free and paid digital courses</span></div>
+
+        <span class="phase-label" style="margin-top:1.75rem;">End of Session (10 Mins)</span>
+        <div class="prog-row"><span class="prog-time"></span><span class="prog-name">Herbal beverages and free conversation with fellow practitioners</span></div>
+
+        <div class="program-note">
+          <strong>For all levels.</strong> Pre-recorded sessions play in the voice of each technique's creator or founder, making them universally accessible. Designed for beginners, richly layered for advanced practitioners.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- HOST -->
+<section class="host" id="host">
+  <div class="container">
+    <div class="host-grid">
+      <div class="host-photos fade-up">
+        <div class="photos-mosaic">
+          <!-- MAIN PHOTO: Portrait -->
+          <div class="photo-slot photo-main">
+            <img src="https://drive.google.com/uc?export=view&id=1Wkt-twZUCp8dVcN68lweu5dfHQvIjFu6" alt="Shubho Broto Das, your host" style="width:100%;height:100%;object-fit:cover;object-position:center top;display:block;">
+          </div>
+          <!-- SECONDARY: Meditation on rock -->
+          <div class="photo-slot photo-left">
+            <img src="https://drive.google.com/uc?export=view&id=1vT3MzMHmQnsWgGiNYCSdocd2qKWuCQr7" alt="Meditating in nature" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+          <!-- ACCENT -->
+          <div class="photo-slot photo-right">
+            <img src="https://drive.google.com/uc?export=view&id=1t1HHVHMgEYJ1_BtYJIrXjW1CxBERvDon" alt="The meditation space" style="width:100%;height:100%;object-fit:cover;display:block;">
+          </div>
+        </div>
+        <div class="host-stat-row">
+          <div class="host-mini-stat"><span class="v">10+</span><span class="l">Yrs Practice</span></div>
+          <div class="host-mini-stat"><span class="v">5+</span><span class="l">Traditions</span></div>
+          <div class="host-mini-stat"><span class="v">⭐ 5.0</span><span class="l">Rated Host</span></div>
+        </div>
+      </div>
+
+      <div class="host-bio-col fade-up">
+        <span class="section-eyebrow">Your Host</span>
+        <h2>A Fellow Seeker,<br>Not a Guru</h2>
+        <span class="host-role">Millennial Multi-Hyphenate · Digital Nomad · Decade-Long Meditator</span>
+
+        <p>My path has been unconventional by design, from financial analyst at a leading management consulting firm to Wall Street business transformation consultant for Fortune 500 companies in New York City. From there, I co-founded a creative agency, led a cross-functional team with a European social enterprise fund, incubated a probiotic health beverage startup, and found my companion for life in a new city.</p>
+
+        <p>Five years ago, I took a sabbatical and turned inward. What started as curiosity became a decade-long commitment: a 10-Day Vipassana silent retreat, a 3-month intensive Patanjali yoga and meditation program at a leading spiritual university, and annual Himalayan treks where I met sages, yogis, mystics, and monks. Meditation did not just change how I felt, it changed how I think, create, and lead.</p>
+
+        <p>My wife and I want to extend our home as an alternative to commercial meditation studios, a non-commercial social spot for relaxation in the fast-paced IT Capital of India. We do not consider ourselves coaches, gurus, or experts. We are fellow learners, compelled to share what we have found most helpful with a very small circle of like-minded individuals.</p>
+
+        <span class="traditions-label">Traditions &amp; Techniques Explored</span>
+        <div class="traditions-wrap">
+          <span class="trad-tag">Vipassana</span>
+          <span class="trad-tag">Patanjali Yoga</span>
+          <span class="trad-tag">SVYASA Relaxation</span>
+          <span class="trad-tag">Yoga Nidra</span>
+          <span class="trad-tag">Transcendental Meditation</span>
+          <span class="trad-tag">Inner Engineering</span>
+          <span class="trad-tag">Abraham Hicks</span>
+          <span class="trad-tag">Creators Child</span>
+          <span class="trad-tag">Louise Hay</span>
+          <span class="trad-tag">Mooji Vedanta</span>
+          <span class="trad-tag">Osho Dynamic</span>
+          <span class="trad-tag">NityaShanti</span>
+          <span class="trad-tag">MindValley</span>
+          <span class="trad-tag">Sivananda</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- TESTIMONIALS -->
+<section class="testimonials">
+  <div class="container">
+    <div class="fade-up">
+      <span class="section-eyebrow">Words from the Circle</span>
+      <h2 class="section-title">What Practitioners Say</h2>
+    </div>
+    <div class="testi-grid">
+      <div class="tcard fade-up">
+        <span class="tcard-stars">★★★★★</span>
+        <p class="tcard-text">"I came with racing thoughts and left in a completely different state. The group circle at the start was unexpectedly powerful. Knowing everyone in the room was there for the same reason made the meditation land much deeper."</p>
+        <span class="tcard-author">Priya S. · Software Engineer, Whitefield</span>
+      </div>
+      <div class="tcard fade-up">
+        <span class="tcard-stars">★★★★★</span>
+        <p class="tcard-text">"The combination of breathwork before the meditation made a visible difference. I have attended studio sessions before but this felt more personal, more real. The herbal tea and the conversation at the end were a bonus I did not expect."</p>
+        <span class="tcard-author">Arjun M. · Startup Founder, Indiranagar</span>
+      </div>
+      <div class="tcard fade-up">
+        <span class="tcard-stars">★★★★★</span>
+        <p class="tcard-text">"It is rare to find something this intentional and honest in a city that is always in a rush. The hosts create a space that feels completely safe. I have recommended this to everyone in my team."</p>
+        <span class="tcard-author">Kavitha R. · UX Designer, Koramangala</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- INCLUDED -->
+<section class="included" id="included">
+  <div class="container">
+    <div class="fade-up">
+      <span class="section-eyebrow">Everything You Need</span>
+      <h2 class="section-title">What's Included &amp; What to Bring</h2>
+    </div>
+    <div class="included-grid">
+      <div class="inc-card fade-up">
+        <h3>Provided by Your Hosts</h3>
+        <ul class="inc-list">
+          <li>Yoga or meditation mat, soft carpet seating</li>
+          <li>Chair, available on request</li>
+          <li>Hot herbal tea or refreshing iced tea</li>
+          <li>Filtered RO water</li>
+          <li>Diffused essential oils and ambient lighting</li>
+          <li>Curated ambient soundscape throughout</li>
+          <li>Pre-recorded sessions in the creators' own voices</li>
+        </ul>
+      </div>
+      <div class="inc-card fade-up">
+        <h3>What to Bring</h3>
+        <ul class="inc-list bring-list">
+          <li>Journal, notepad and pen for insights integration</li>
+          <li>Socks, shoes are removed at the door</li>
+          <li>Comfortable, flexible clothing for ground-sitting and lying</li>
+          <li>Warm layer for cooler Bengaluru evenings</li>
+          <li>Packaged mineral water if you prefer for personal health</li>
+          <li>An open mind, love, and willingness to share and learn</li>
+        </ul>
+      </div>
+      <div class="inc-card fade-up">
+        <h3>Post-Session Resources</h3>
+        <ul class="inc-list">
+          <li>Guided meditation MP3s for your personal daily ritual, shared via email or WhatsApp</li>
+          <li>Curated reading list of books across traditions explored in the session</li>
+          <li>Podcast recommendations hand-picked for beginners and curious practitioners</li>
+          <li>Links to free digital courses from MindValley, YouTube teachers, and independent instructors</li>
+          <li>Printable daily practice checklist to anchor a sustainable morning ritual</li>
+          <li>QR code to a shared resource folder, updated periodically with new finds</li>
+          <li>Optional WhatsApp community to stay connected with fellow practitioners from the circle</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- PRACTICAL -->
+<section class="practical" id="info">
+  <div class="container">
+    <div class="fade-up">
+      <span class="section-eyebrow">Good to Know</span>
+      <h2 class="section-title">Practical Details</h2>
+    </div>
+    <div class="info-grid">
+      <div class="info-card fade-up">
+        <span class="info-icon">🧘</span>
+        <h4>Who It's For</h4>
+        <p>All levels welcome, from complete beginners to advanced practitioners. Any age group: teenagers to seniors. Maximum 5 guests per session to preserve the intimacy of the circle.</p>
+      </div>
+      <div class="info-card fade-up">
+        <span class="info-icon">🗓</span>
+        <h4>Duration &amp; Timing</h4>
+        <p>2.5 hours total. Doors open 20 minutes before the program starts. Please plan to arrive on time, late entry disrupts the group field established in the opening circle.</p>
+      </div>
+      <div class="info-card fade-up">
+        <span class="info-icon">👟</span>
+        <h4>Shoes Off Policy</h4>
+        <p>Shoes are removed at the beginning of the session. Please wear socks. Comfortable, flexible clothing is recommended as you will sit on the ground and lie on your back.</p>
+      </div>
+      <div class="info-card fade-up">
+        <span class="info-icon">📵</span>
+        <h4>Mobile-Free Zone</h4>
+        <p>All guests switch off their phones and keep them in their bags. This is your chance to genuinely unplug. The session is designed for it.</p>
+      </div>
+      <div class="info-card fade-up">
+        <span class="info-icon">🌿</span>
+        <h4>Energy Exchange</h4>
+        <p>The fee of $25 exists to reduce no-shows and ensure commitment for 2.5 hours. If the session helps you, the real contribution is integrating meditation into your daily life.</p>
+      </div>
+      <div class="info-card fade-up">
+        <span class="info-icon">🌐</span>
+        <h4>Languages</h4>
+        <p>Hosted in English. Pre-recorded sessions are in Universal Sound and Music, making them accessible beyond language, ideal for international visitors and non-native speakers.</p>
+      </div>
+    </div>
+
+    <!-- Know before you go -->
+    <div style="margin-top:4rem;" class="fade-up">
+      <span class="section-eyebrow">Before You Arrive</span>
+      <h3 style="font-family:var(--font-head);font-size:1.65rem;font-weight:300;color:var(--text-primary);margin-bottom:0.5rem;">Nothing to prepare. Just come ready to slow down.</h3>
+    </div>
+    <div class="know-grid">
+      <div class="know-row fade-up">
+        <div class="know-ico">☕</div>
+        <div><h5>Arrive Open</h5><p>No preparation needed. No prior experience required. Just show up willing to receive.</p></div>
+      </div>
+      <div class="know-row fade-up">
+        <div class="know-ico">🪑</div>
+        <div><h5>Ground-Sitting Default</h5><p>Meditation is traditionally practiced seated on the ground. A chair is available if that gets uncomfortable.</p></div>
+      </div>
+      <div class="know-row fade-up">
+        <div class="know-ico">🏠</div>
+        <div><h5>Intimate Home Setting</h5><p>A thoughtfully prepared corner of a home, the same space where your hosts begin and end each day in practice.</p></div>
+      </div>
+      <div class="know-row fade-up">
+        <div class="know-ico">🪪</div>
+        <div><h5>Government ID Required</h5><p>AirBnB requires a photo ID match at booking for experience verification, a one-time process on the platform.</p></div>
+      </div>
+    </div>
+
+    <!-- Location -->
+    <div class="location-box fade-up">
+      <div>
+        <h4>Where You'll Be</h4>
+        <p>A 2nd-floor apartment in a gated community in central Bengaluru, with lift access. The same corner where your hosts begin and end each day in practice.</p>
+        <div class="landmarks">
+          <span class="lm">15-minute walk from Ulsoor Lake</span>
+          <span class="lm">3 km from MG Road</span>
+          <span class="lm">Well-connected to CBD</span>
+          <span class="lm">Limited bike parking on premises</span>
+          <span class="lm">Street parking available in the bylanes</span>
+        </div>
+      </div>
+      <div class="map-box">
+        <span class="map-icon">📍</span>
+        <span>Central Bengaluru</span>
+        <small style="color:var(--text-muted);font-size:0.75rem;margin-top:0.25rem;">Exact address shared upon booking confirmation via AirBnB</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- BOOKING -->
+<section class="booking" id="book">
+  <div class="container">
+    <span class="section-eyebrow" style="display:block;text-align:center;">Reserve Your Spot</span>
+    <h2 class="section-title fade-up" style="text-align:center;">Join the Circle</h2>
+    <p class="section-sub fade-up" style="text-align:center;margin:0.5rem auto 0;">Small group. Intimate setting. Curated practice. Reenter the concrete jungle with more lightness and ease in your step.</p>
+
+    <div class="price-block fade-up">
+      <span class="price-from">Energy Exchange</span>
+      <span class="price-val">$25</span>
+      <span class="price-note">per person · 2.5 Hours · Drinks and Equipment Included</span>
+    </div>
+
+    <a
+      href="https://airbnb.com/experiences"
+      target="_blank"
+      rel="noopener"
+      class="airbnb-btn fade-up"
+    >
+      ✦ &nbsp;Book on AirBnB
+    </a>
+
+    <div class="reassurance fade-up">
+      <span class="r-item"><span class="r-check">✓</span> Up to 5 guests per session</span>
+      <span class="r-item"><span class="r-check">✓</span> Drinks and equipment included</span>
+      <span class="r-item"><span class="r-check">✓</span> Beginner to advanced welcome</span>
+      <span class="r-item"><span class="r-check">✓</span> English and Universal Sound</span>
+      <span class="r-item"><span class="r-check">✓</span> Central Bengaluru</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>
+    ◎ <strong style="color:var(--text-primary);">Circle into Calm</strong> · Guided Meditation Experience · Bengaluru<br>
+    Hosted by fellow seekers, not gurus. A non-commercial home for stillness in a city that rarely stops.<br>
+    <span style="display:inline-block;margin-top:0.4rem;">
+      <a href="https://airbnb.com/experiences" target="_blank" rel="noopener">Book on AirBnB</a>
+      &nbsp;·&nbsp; Meditation &amp; Wellness &nbsp;·&nbsp; Bengaluru, Karnataka, India
+    </span>
+  </p>
+</footer>
+
+<script>
+  // Fade-up on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+  document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+
+  // Nav solidifies on scroll
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    nav.style.boxShadow = window.scrollY > 60 ? '0 1px 12px rgba(0,0,0,0.07)' : 'none';
+  }, { passive: true });
+</script>
+
+</body>
+</html>
